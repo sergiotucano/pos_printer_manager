@@ -14,7 +14,7 @@ dependencies:
   blue_thermal_printer: ^1.2.3          
   network_info_plus: ^2.1.4+1
   easy_logger: ^0.0.2
-  printing: ^5.6.6
+  printing: ^5.9.2
   win32: ^3.0.0
   ffi: ^2.0.1
   flutter_usb_printer:  ^0.1.0+1
