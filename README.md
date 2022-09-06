@@ -1,3 +1,6 @@
+## This project is a fork of pos_printer_manager
+https://github.com/kechankrisna/pos_printer_manager
+
 # pos_printer_manager
 
 This plugin allow developer to print to esc printer both wireless or bluetooth (currently support only on android). This has method to list down those printers easily.
