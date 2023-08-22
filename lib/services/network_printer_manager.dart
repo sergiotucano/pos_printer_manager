@@ -6,8 +6,8 @@ import 'printer_manager.dart';
 
 /// Network Printer
 class NetworkPrinterManager extends PrinterManager {
-  Generator? generator;
-  Socket? socket;
+  Generator generator;
+  Socket socket;
 
   NetworkPrinterManager(
     POSPrinter printer,
@@ -28,7 +28,7 @@ class NetworkPrinterManager extends PrinterManager {
 
   /// [connect] let you connect to a network printer
   Future<ConnectionResponse> connect(
-      {Duration? timeout: const Duration(seconds: 5)}) async {
+      {Duration timeout = const Duration(seconds: 5)}) async {
     try {
       this.socket = await Socket.connect(address, port, timeout: timeout);
       this.isConnected = true;
@@ -77,7 +77,7 @@ class NetworkPrinterManager extends PrinterManager {
   }
 
   /// [timeout]: milliseconds to wait after closing the socket
-  Future<ConnectionResponse> disconnect({Duration? timeout}) async {
+  Future<ConnectionResponse> disconnect({Duration timeout}) async {
     await socket?.flush();
     await socket?.close();
     this.isConnected = false;

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pos_printer_manager/pos_printer_manager.dart';
-import 'package:pos_printer_manager_example/webview_helper.dart';
-import 'package:webcontent_converter/webcontent_converter.dart';
-import 'demo.dart';
-import 'service.dart';
 
 class USBPrinterScreen extends StatefulWidget {
   @override
@@ -30,9 +26,6 @@ class _USBPrinterScreenState extends State<USBPrinterScreen> {
                     subtitle: Text("${printer.address}"),
                     leading: Icon(Icons.usb),
                     onTap: () => _connect(printer),
-                    onLongPress: () {
-                      _startPrinter();
-                    },
                     selected: printer.connected,
                   ))
               .toList(),
@@ -68,21 +61,4 @@ class _USBPrinterScreenState extends State<USBPrinterScreen> {
     });
   }
 
-  _startPrinter() async {
-    if (_data.isEmpty) {
-      final content = Demo.getShortReceiptContent();
-      var bytes = await WebcontentConverter.contentToImage(
-        content: content,
-        executablePath: WebViewHelper.executablePath(),
-      );
-      var service = ESCPrinterService(bytes);
-      var data = await service.getBytes();
-      if (mounted) setState(() => _data = data);
-    }
-
-    if (_manager != null) {
-      print("isConnected ${_manager!.isConnected}");
-      _manager!.writeBytes(_data, isDisconnect: false);
-    }
-  }
 }

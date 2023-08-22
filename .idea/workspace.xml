@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24831e0f-5533-451e-97ca-aa5bc045e3e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos_printer_manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pos_printer_manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/usb_printer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/usb_printer_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/bluetooth_printer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/bluetooth_printer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/network_printer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/network_printer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/pos_printer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/pos_printer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/usb_printer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/usb_printer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/bluetooth_printer_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/bluetooth_printer_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/network_printer_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/network_printer_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/network_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/network_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/printer_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/printer_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/usb_printer_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/usb_printer_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,19 +33,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1qRSs30Iff4wGqQynibCW8sadk7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pdvx-mobile" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Projetos/pos_printer_manager",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -53,6 +74,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
