@@ -36,16 +36,7 @@ This plugin allow developer to print to esc printer both wireless or bluetooth (
     });
   }
 
-  _startPrinter() async {
-    final content = Demo.getShortReceiptContent();
-    var bytes = await WebcontentConverter.contentToImage(content: content);
-    var service = ESCPrinterService(bytes);
-    var data = await service.getBytes(paperSize: PaperSize.mm58);
-    if (_manager != null) {
-      print("isConnected ${_manager.isConnected}");
-      _manager.writeBytes(data, isDisconnect: false);
-    }
-  }
+  
 ```
 
 - Network Printer
@@ -74,23 +65,7 @@ This plugin allow developer to print to esc printer both wireless or bluetooth (
     });
   }
 
-  _startPrinter() async {
-    if (_data.isEmpty) {
-      final content = Demo.getShortReceiptContent();
-      var bytes = await WebcontentConverter.contentToImage(
-        content: content,
-        executablePath: WebViewHelper.executablePath(),
-      );
-      var service = ESCPrinterService(bytes);
-      var data = await service.getBytes();
-      if (mounted) setState(() => _data = data);
-    }
-
-    if (_manager != null) {
-      print("isConnected ${_manager.isConnected}");
-      _manager.writeBytes(_data, isDisconnect: false);
-    }
-  }
+ 
 ```
 
 - USB Printer
@@ -118,23 +93,7 @@ _scan() async {
     });
   }
 
-  _startPrinter() async {
-    if (_data.isEmpty) {
-      final content = Demo.getShortReceiptContent();
-      var bytes = await WebcontentConverter.contentToImage(
-        content: content,
-        executablePath: WebViewHelper.executablePath(),
-      );
-      var service = ESCPrinterService(bytes);
-      var data = await service.getBytes();
-      if (mounted) setState(() => _data = data);
-    }
-
-    if (_manager != null) {
-      print("isConnected ${_manager.isConnected}");
-      _manager.writeBytes(_data, isDisconnect: false);
-    }
-  }
+  
 ```
 
 ## Supports

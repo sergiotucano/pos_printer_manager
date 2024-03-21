@@ -68,7 +68,6 @@ public class PrintingJob extends PrintDocumentAdapter {
         result.put("directPrint", false);
         result.put("dynamicLayout", canPrint);
         result.put("canPrint", canPrint);
-        result.put("canConvertHtml", canRaster);
         result.put("canShare", true);
         result.put("canRaster", canRaster);
         return result;
