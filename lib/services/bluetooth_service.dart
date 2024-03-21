@@ -13,9 +13,9 @@ class BluetoothService {
       devices = results
           .map(
             (d) => BluetoothPrinter(
-              id: d.address,
-              address: d.address,
-              name: d.name,
+              id: d.address??'',
+              address: d.address??'',
+              name: d.name??'',
               type: d.type,
             ),
           )

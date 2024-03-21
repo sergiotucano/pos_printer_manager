@@ -3,17 +3,17 @@ import 'package:pos_printer_manager/enums/connection_response.dart';
 import 'package:pos_printer_manager/models/pos_printer.dart';
 
 abstract class PrinterManager {
-  PaperSize paperSize;
-  CapabilityProfile profile;
-  Generator generator;
+  late PaperSize paperSize;
+  late CapabilityProfile profile;
+  late Generator generator;
   bool isConnected = false;
-  String address;
-  int vendorId;
-  int productId;
-  int deviceId;
+  String address = '';
+  int vendorId = 0;
+  int productId = 0;
+  int deviceId = 0;
   int port = 9100;
   int spaceBetweenRows = 5;
-  POSPrinter printer;
+  late POSPrinter printer;
 
   Future<ConnectionResponse> connect({Duration timeout});
 

@@ -21,13 +21,13 @@ import 'package:meta/meta.dart';
 class Printer {
   /// Create a printer information
   const Printer({
-    this.url,
-    String name,
-    this.model,
-    this.location,
-    this.comment,
-    bool isDefault,
-    bool isAvailable,
+    this.url = '',
+    String name = '',
+    this.model = '',
+    this.location = '',
+    this.comment = '',
+    bool isDefault = false,
+    bool isAvailable = false,
   })  : name = name ?? url,
         isDefault = isDefault ?? false,
         isAvailable = isAvailable ?? true;

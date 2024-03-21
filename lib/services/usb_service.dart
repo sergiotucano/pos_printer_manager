@@ -16,7 +16,7 @@ class USBService {
 
     final printers = <Printer>[];
 
-    for (final printer in list) {
+    for (final printer in list!) {
       printers.add(Printer.fromMap(printer));
     }
 
@@ -46,9 +46,9 @@ class USBService {
             .map((e) => USBPrinter(
                   name: e["productName"],
                   address: e["manufacturer"],
-                  vendorId: int.tryParse(e["vendorId"]),
-                  productId: int.tryParse(e["productId"]),
-                  deviceId: int.tryParse(e["deviceId"]),
+                  vendorId: int.tryParse(e["vendorId"]) ?? 0,
+                  productId: int.tryParse(e["productId"])?? 0,
+                  deviceId: int.tryParse(e["deviceId"])?? 0,
                 ))
             .toList()
       ];

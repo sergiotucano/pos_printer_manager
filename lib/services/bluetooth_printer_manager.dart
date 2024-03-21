@@ -9,7 +9,7 @@ import 'printer_manager.dart';
 
 /// Bluetooth Printer
 class BluetoothPrinterManager extends PrinterManager {
-  Generator generator;
+  late Generator generator;
   themal.BlueThermalPrinter bluetooth = themal.BlueThermalPrinter.instance;
 
   BluetoothPrinterManager(
@@ -17,7 +17,7 @@ class BluetoothPrinterManager extends PrinterManager {
     PaperSize paperSize,
     CapabilityProfile profile, {
     int spaceBetweenRows = 5,
-    int port: 9100,
+    int port = 9100,
   }) {
     super.printer = printer;
     super.address = printer.address;
@@ -25,8 +25,7 @@ class BluetoothPrinterManager extends PrinterManager {
     super.profile = profile;
     super.spaceBetweenRows = spaceBetweenRows;
     super.port = port;
-    generator =
-        Generator(paperSize, profile, spaceBetweenRows: spaceBetweenRows);
+    generator = Generator(paperSize, profile, spaceBetweenRows: spaceBetweenRows);
   }
 
   /// [connect] let you connect to a bluetooth printer
@@ -100,7 +99,7 @@ class BluetoothPrinterManager extends PrinterManager {
   }
 
   /// [timeout]: milliseconds to wait after closing the socket
-  Future<ConnectionResponse> disconnect({Duration timeout}) async {
+  Future<ConnectionResponse> disconnect({Duration timeout = const Duration(seconds: 3)}) async {
     if (Platform.isAndroid || Platform.isIOS) {
       await bluetooth.disconnect();
       this.isConnected = false;
@@ -110,9 +109,7 @@ class BluetoothPrinterManager extends PrinterManager {
     // this.isConnected = false;
     // }
 
-    if (timeout != null) {
-      await Future.delayed(timeout, () => null);
-    }
+    await Future.delayed(timeout, () => null);
     return ConnectionResponse.success;
   }
 }

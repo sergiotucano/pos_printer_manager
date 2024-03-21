@@ -12,7 +12,7 @@ import 'usb_service.dart';
 
 /// USB Printer
 class USBPrinterManager extends PrinterManager {
-  Generator generator;
+  late Generator generator;
 
   /// usb_serial
   var usbPrinter = FlutterUsbPrinter();
@@ -22,17 +22,17 @@ class USBPrinterManager extends PrinterManager {
   Pointer<Utf16> pDocName = 'My Document'.toNativeUtf16();
   Pointer<Utf16> pDataType = 'RAW'.toNativeUtf16();
   Pointer<Uint32> dwBytesWritten = calloc<DWORD>();
-  Pointer<DOC_INFO_1> docInfo;
-  Pointer<Utf16> szPrinterName;
-  int hPrinter;
-  int dwCount;
+  late Pointer<DOC_INFO_1> docInfo;
+  late Pointer<Utf16> szPrinterName;
+  late int hPrinter;
+  late int dwCount;
 
   USBPrinterManager(
     POSPrinter printer,
     PaperSize paperSize,
     CapabilityProfile profile, {
     int spaceBetweenRows = 5,
-    int port: 9100,
+    int port = 9100,
   }) {
     super.printer = printer;
     super.address = printer.address;
@@ -101,7 +101,7 @@ class USBPrinterManager extends PrinterManager {
   }
 
   @override
-  Future<ConnectionResponse> disconnect({Duration timeout}) async {
+  Future<ConnectionResponse> disconnect({Duration timeout = const Duration(seconds: 3)}) async {
     if (Platform.isWindows) {
       // Tidy up the printer handle.
       ClosePrinter(hPrinter);
@@ -114,18 +114,14 @@ class USBPrinterManager extends PrinterManager {
 
       this.isConnected = false;
       this.printer.connected = false;
-      if (timeout != null) {
-        await Future.delayed(timeout, () => null);
-      }
+      await Future.delayed(timeout, () => null);
       PosPrinterManager.logger.error("disconnect");
       return ConnectionResponse.success;
     } else if (Platform.isAndroid) {
       await usbPrinter.close();
       this.isConnected = false;
       this.printer.connected = false;
-      if (timeout != null) {
-        await Future.delayed(timeout, () => null);
-      }
+      await Future.delayed(timeout, () => null);
       return ConnectionResponse.success;
     }
     return ConnectionResponse.timeout;

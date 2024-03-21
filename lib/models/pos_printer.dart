@@ -11,20 +11,20 @@ class POSPrinter {
   bool connected;
   int type;
   BluetoothPrinterType get bluetoothType => type.printerType();
-  ConnectionType connectionType;
+  late ConnectionType connectionType;
 
   factory POSPrinter.instance() => POSPrinter();
 
   POSPrinter({
-    this.id,
-    this.name,
-    this.address,
-    this.deviceId,
-    this.vendorId,
-    this.productId,
+    this.id = '',
+    this.name = '',
+    this.address = '',
+    this.deviceId = 0,
+    this.vendorId = 0,
+    this.productId = 0,
     this.connected = false,
-    this.type: 0,
-    this.connectionType,
+    this.type = 0,
+    this.connectionType = ConnectionType.usb,
   });
 }
 
