@@ -3,15 +3,15 @@ import 'package:pos_printer_manager/models/pos_printer.dart';
 
 class USBPrinter extends POSPrinter {
   USBPrinter({
-    String id = '',
-    String name = '',
-    String address = '',
-    int deviceId = 0,
-    int vendorId = 0,
-    int productId = 0,
+    String? id,
+    String? name,
+    String? address,
+    int? deviceId,
+    int? vendorId,
+    int? productId,
     bool connected = false,
     int type = 0,
-    ConnectionType connectionType = ConnectionType.usb,
+    ConnectionType? connectionType,
   }) {
     this.id = id;
     this.name = name;
