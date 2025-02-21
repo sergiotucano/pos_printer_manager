@@ -1,1 +1,1 @@
-enum ConnectionType { network, usb }
+enum ConnectionType {  network, bluetooth, usb }
