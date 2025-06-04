@@ -10,9 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   esc_pos_utils_plus:  ^2.0.1+6
-  flutter_usb_printer:
-    git:
-      url: https://github.com/sergiotucano/flutter_usb_printer.git
+  flutter_usb_printer: ^0.1.0+1
   easy_logger: ^0.0.2
   win32: ^4.1.4
   printing: ^5.10.4
