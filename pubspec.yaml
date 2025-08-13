@@ -4,7 +4,7 @@ version: 2.0.0
 homepage: https://github.com/sergiotucano/pos_printer_manager_plus
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -12,12 +12,10 @@ dependencies:
   esc_pos_utils_plus:  ^2.0.1+6
   flutter_usb_printer: ^0.1.0+1
   easy_logger: ^0.0.2
-  win32: ^4.1.4
+  win32: ^5.14.0
   printing: ^5.10.4
-  ffi: ^2.0.2
+  ffi: ^2.1.4
   blue_thermal_printer: ^1.2.3
-
-
 
 dev_dependencies:
   flutter_test:
