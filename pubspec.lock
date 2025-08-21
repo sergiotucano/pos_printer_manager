@@ -36,10 +36,11 @@ packages:
   blue_thermal_printer:
     dependency: "direct main"
     description:
-      name: blue_thermal_printer
-      sha256: "2b8a93f90be335494d2172dbc869c31b95638087f89591b4ad69fd9305eaf80b"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "7a4d29f8dd885433706a2eb809f0a9674fc076a0"
+      url: "https://github.com/raihanArman/blue_thermal_printer.git"
+    source: git
     version: "1.2.3"
   boolean_selector:
     dependency: transitive
