@@ -38,8 +38,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "7a4d29f8dd885433706a2eb809f0a9674fc076a0"
-      url: "https://github.com/raihanArman/blue_thermal_printer.git"
+      resolved-ref: "8bb2f286ea809f1e1388e90183fd10d0f373ec50"
+      url: "https://github.com/hazbu/blue_thermal_printer.git"
     source: git
     version: "1.2.3"
   boolean_selector:
