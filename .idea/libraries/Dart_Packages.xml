@@ -33,7 +33,7 @@
         <entry key="blue_thermal_printer">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/git/blue_thermal_printer-7a4d29f8dd885433706a2eb809f0a9674fc076a0//lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/git/blue_thermal_printer-8bb2f286ea809f1e1388e90183fd10d0f373ec50//lib" />
             </list>
           </value>
         </entry>
@@ -369,7 +369,7 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/git/blue_thermal_printer-7a4d29f8dd885433706a2eb809f0a9674fc076a0//lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/git/blue_thermal_printer-8bb2f286ea809f1e1388e90183fd10d0f373ec50//lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.4.10/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.13.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/barcode-2.2.9/lib" />
